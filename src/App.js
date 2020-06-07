@@ -34,7 +34,6 @@ const todoTasks = [
       id: 1528817084369,
       completed: false
   }
-
 ];
 
 class App extends React.Component {
@@ -50,7 +49,7 @@ class App extends React.Component {
 
     addTodo = (e, todo) => {
       e.preventDefault();
-      const newTodo ={
+      const newTodo = {
       task: todo,
       id: Date.now(),
       completed: false
@@ -64,7 +63,7 @@ class App extends React.Component {
       console.log(todoId);
       this.setState({
         todoTasks: this.state.todoTasks.map(todo => {
-          if (todoId === todo.id ){
+          if (todoId === todo.id ) {
             return {
               ...todo, completed: !todo.completed
             };
@@ -85,12 +84,14 @@ class App extends React.Component {
       <div className="App">
         <div className="header">
           <h1>Welcome to T0D0</h1>
-          <TodoForm addTodo={this.addTodo}/>
+          <TodoForm addTodo={this.addTodo}
+          />
       </div>
       <TodoList
-        todoTasks= {this.state.todoTasks}
+        todoTasks={this.state.todoTasks}
         toggleTodo={this.toggleTodo}
-        clearCompleted={this.clearCompleted}/>
+        clearCompleted={this.clearCompleted}
+        />
         </div>
     );
   }
