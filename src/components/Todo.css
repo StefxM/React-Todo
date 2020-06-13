@@ -1,0 +1,9 @@
+*{
+    background-color: black;
+    color: teal;
+
+}
+
+.todo.purchased {
+    text-decoration: line-through;
+  }
