@@ -80,7 +80,7 @@ class App extends React.Component {
     };
 
   render() {
-    console.log('rendering');
+    console.log(this.state.todoTasks);
     return (
       <div className="App">
         <div className="header">
